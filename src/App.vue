@@ -25,7 +25,7 @@
 
 <style scoped>
 .logo {
-  height: 5em;
+  height: 4em;
   padding: 1.5em;
   will-change: filter;
 }
