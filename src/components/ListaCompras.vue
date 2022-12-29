@@ -1,12 +1,12 @@
 <script setup>
-    import { ref, computed, onBeforeMount, onBeforeUnmount } from 'vue';
+    import { ref, computed, onBeforeMount, onBeforeUnmount, onUpdated } from 'vue';
 
     const encabezado = "Lista de compras";
     const nuevo=ref("");
     const lista=ref([]);
     function agregar(){
         lista.value.push(nuevo.value);
-        nuevo.value=""
+        nuevo.value="";
     }
     function eliminar(index){
         lista.value.splice(index,1);
@@ -16,7 +16,7 @@
         console.log("antes")
         lista.value=JSON.parse(localStorage.getItem("lista"))||[];
     })
-    onBeforeUnmount(()=>{
+    onUpdated(()=>{
         console.log("despues")
         localStorage.setItem("lista",JSON.stringify(lista.value));
     });
@@ -29,7 +29,7 @@
         <button @click="agregar()">Agregar</button>
         <p style="margin-top: 0; font-size:smaller;">{{ calcularCaracteres }} / 50</p>
         <div v-for="(producto,index) of lista" :key="index">
-            <p style="display:inline-block">{{ `${index} - ${producto }` }}</p>
+            <p style="display:inline-block">{{ `${index+1} - ${producto }` }}</p>
             <button style="display:inline-block" @click="eliminar(index)">X</button>
         </div>
     </div>

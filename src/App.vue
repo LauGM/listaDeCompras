@@ -7,8 +7,8 @@
       <!-- use the router-link component for navigation. -->
       <!-- specify the link by passing the `to` prop. -->
       <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-      <router-link to="/">Go to Home</router-link> |
-      <router-link to="/about">Go to About</router-link>
+      <router-link to="/">Ir a Home</router-link> |
+      <router-link to="/about">Ir a About</router-link>
     </p>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
