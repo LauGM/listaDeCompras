@@ -1,5 +1,5 @@
 <script setup>
-    import { ref, computed } from 'vue';
+    import { ref, computed, onBeforeMount, onBeforeUnmount } from 'vue';
 
     const encabezado = "Lista de compras";
     const nuevo=ref("");
@@ -12,6 +12,14 @@
         lista.value.splice(index,1);
     }
     const calcularCaracteres=computed(()=>nuevo.value.length);
+    onBeforeMount(()=>{
+        console.log("antes")
+        lista.value=JSON.parse(localStorage.getItem("lista"))||[];
+    })
+    onBeforeUnmount(()=>{
+        console.log("despues")
+        localStorage.setItem("lista",JSON.stringify(lista.value));
+    });
 </script>
 
 <template>
@@ -24,7 +32,6 @@
             <p style="display:inline-block">{{ `${index} - ${producto }` }}</p>
             <button style="display:inline-block" @click="eliminar(index)">X</button>
         </div>
-        
     </div>
 </template>
 
