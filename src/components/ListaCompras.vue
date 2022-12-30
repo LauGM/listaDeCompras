@@ -66,23 +66,23 @@ onBeforeUpdate(() => {
         <hr />
         <div>
             <label>Filtrar por:</label>
-            <br>
             <label>Nada
                 <input v-model="radioCat" type="radio" id="ninguno" name="ninguno" value="" selected>
             </label>
-            <label>| 🛒
+            <br>
+            <label> 🛒
                 <input v-model="radioCat" type="radio" id="almacen" name="almacen" value="🛒">
             </label>
-            <label>| 🥕
+            <label>|  🥕
                 <input v-model="radioCat" type="radio" id="verduleria" name="verduleria" value="🥕">
             </label>
-            <label>| 🍖
+            <label>|  🍖
                 <input v-model="radioCat" type="radio" id="carniceria" name="carniceria" value="🍖">
             </label>
-            <label>| 🥐
+            <label>|  🥐
                 <input v-model="radioCat" type="radio" id="panaderia" name="panaderia" value="🥖">
             </label>
-            <label>| 🛍️
+            <label>|  🛍️
                 <input v-model="radioCat" type="radio" id="otro" name="otro" value="🛍️">
             </label>
         </div>
@@ -96,6 +96,6 @@ onBeforeUpdate(() => {
 
 <style scoped>
     label{
-        margin:1px;
+        margin:3px;
     }
 </style>
