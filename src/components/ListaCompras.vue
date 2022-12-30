@@ -73,16 +73,16 @@ onBeforeUpdate(() => {
             <label> 🛒
                 <input v-model="radioCat" type="radio" id="almacen" name="almacen" value="🛒">
             </label>
-            <label>|  🥕
+            <label>| 🥕
                 <input v-model="radioCat" type="radio" id="verduleria" name="verduleria" value="🥕">
             </label>
-            <label>|  🍖
+            <label>| 🍖
                 <input v-model="radioCat" type="radio" id="carniceria" name="carniceria" value="🍖">
             </label>
-            <label>|  🥐
+            <label>| 🥐
                 <input v-model="radioCat" type="radio" id="panaderia" name="panaderia" value="🥖">
             </label>
-            <label>|  🛍️
+            <label>| 🛍️
                 <input v-model="radioCat" type="radio" id="otro" name="otro" value="🛍️">
             </label>
         </div>
