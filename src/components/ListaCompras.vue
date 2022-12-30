@@ -67,26 +67,26 @@ onBeforeUpdate(() => {
         <div>
             <label>Filtrar por:</label>
             <br>
-            <label>Sin filtro
+            <label>Nada
                 <input v-model="radioCat" type="radio" id="ninguno" name="ninguno" value="" selected>
             </label>
-            <label>| Almacén 🛒
+            <label>| 🛒
                 <input v-model="radioCat" type="radio" id="almacen" name="almacen" value="🛒">
             </label>
-            <label>| Verdulería 🥕
+            <label>| 🥕
                 <input v-model="radioCat" type="radio" id="verduleria" name="verduleria" value="🥕">
             </label>
-            <br>
-            <label>Carnicería 🍖
+            <label>| 🍖
                 <input v-model="radioCat" type="radio" id="carniceria" name="carniceria" value="🍖">
             </label>
-            <label>| Panadería 🥐
+            <label>| 🥐
                 <input v-model="radioCat" type="radio" id="panaderia" name="panaderia" value="🥖">
             </label>
-            <label>| Otro 🛍️
+            <label>| 🛍️
                 <input v-model="radioCat" type="radio" id="otro" name="otro" value="🛍️">
             </label>
         </div>
+        <hr />
         <div v-for="(producto, index) of filtro" :key="index">
             <p style="display:inline-block">{{ `${index + 1} - ${producto}` }}</p>
             <button style="display:inline-block" @click="eliminar(index)">X</button>
