@@ -96,6 +96,6 @@ onBeforeUpdate(() => {
 
 <style scoped>
     label{
-        margin-right:2px;
+        margin-right:1px;
     }
 </style>
