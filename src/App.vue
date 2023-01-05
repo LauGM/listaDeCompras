@@ -4,9 +4,6 @@
 <template>
   <div>
     <p>
-      <!-- use the router-link component for navigation. -->
-      <!-- specify the link by passing the `to` prop. -->
-      <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
       <router-link to="/">Ir a Home</router-link> |
       <router-link to="/about">Ir a About</router-link>
     </p>
@@ -16,9 +13,6 @@
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    
-    <!-- route outlet -->
-    <!-- component matched by the route will render here -->
     <router-view></router-view>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onUpdated, onBeforeMount, onBeforeUpdate } from 'vue';
+import { ref, computed, onBeforeMount, onBeforeUpdate } from 'vue';
 
 const encabezado = "Lista de compras";
 const nuevo = ref("");
@@ -80,7 +80,7 @@ onBeforeUpdate(() => {
                 <input v-model="radioCat" type="radio" id="carniceria" name="carniceria" value="🍖">
             </label>
             <label>| 🥐
-                <input v-model="radioCat" type="radio" id="panaderia" name="panaderia" value="🥖">
+                <input v-model="radioCat" type="radio" id="panaderia" name="panaderia" value="🥐">
             </label>
             <label>| 🛍️
                 <input v-model="radioCat" type="radio" id="otro" name="otro" value="🛍️">
