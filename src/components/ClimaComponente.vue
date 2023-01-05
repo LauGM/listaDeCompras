@@ -1,6 +1,6 @@
 <template>
-    <p style="font-size: 12px;">Clima en {{ clima.profile.tz }}</p>
-    <p style="font-size: 12px;">Minima: {{ clima.periods[0].minTempC }} grados | Maxima: {{ clima.periods[0].maxTempC }} grados | {{clima.periods[0].weather }}</p>
+    <p style="font-size: 12px;">Clima en {{ clima.place.name }}</p>
+    <p style="font-size: 12px;">Min: {{ clima.periods[0].minTempC }} grados | Max: {{ clima.periods[0].maxTempC }} grados | {{clima.periods[0].weather }}</p>
 </template>
 
 <script setup>
