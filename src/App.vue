@@ -1,4 +1,6 @@
 <script setup>
+import ClimaComponente from './components/ClimaComponente.vue';
+
 </script>
 
 <template>
@@ -7,6 +9,12 @@
       <router-link to="/">Ir a Home</router-link> |
       <router-link to="/about">Ir a About</router-link>
     </p>
+    <Suspense #default>
+      <ClimaComponente />
+    </Suspense>
+    <Suspense #fallback>
+      <p>Cargando clima...</p>
+    </Suspense>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
